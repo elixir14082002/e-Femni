@@ -1,24 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Selling from './Pages/Selling';
+import Blogs from './Pages/Blogs';
+import Donation from './Pages/Donation';
+import Login from './Pages/Login';
+import Signup from './Pages/Signup';
+import Front from './Pages/Front';
+import Home from './Pages/Home';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Button } from '@material-ui/core';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Front />}/>
+          <Route path="/signup" element={<Signup />}/>
+          <Route path="/login" element={<Login />}/>
+          <Route path="/home" element={<Home />}/>
+          <Route path="/sell" element={<Selling />}/>
+          <Route path="/blog" element={<Blogs />}/>
+          <Route path="/donate" element={<Donation />}/>
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
