@@ -6,8 +6,10 @@ import {
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { Group } from "@material-ui/icons";
 import { useNavigate } from "react-router-dom";
+import Cookies from "js-cookie";
+import jwt_decode from "jwt-decode";
+import { useEffect } from "react";
 
 const useStyles = makeStyles((theme) => ({
   b: {
@@ -33,15 +35,14 @@ const useStyles = makeStyles((theme) => ({
     fontFamily: "",
   },
   about: {
+    paddingTop: "6em",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    marginTop: "100px",
     backgroundColor: "#EEEEEE",
-    height: `calc(100vh - 100px)`,
   },
   nav: {
-    height: "100px",
+    height: "60px",
     backgroundColor: "#FDEFF4",
     display: "flex",
     justifyContent: "center",
@@ -64,20 +65,41 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-evenly",
     alignItems: "center",
   },
+  logo: {
+    width: "120px",
+    cursor: "pointer",
+  },
+  side: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+  },
 }));
 
 function Front() {
+  
   const classes = useStyles();
   const navigate = useNavigate();
 
+  useEffect(() => {
+    const token = Cookies.get("jwt-token");
+    try {
+      jwt_decode(token);
+      navigate("/home")
+    } catch (err) {
+      Cookies.remove("jwt-token");
+      navigate("/login");
+    }
+  });
   return (
     <div className={classes.front}>
       {/* Navbar */}
       <AppBar position="fixed" className={classes.nav}>
         <Toolbar>
-          <div className={classes.leftPart}>
-            <Group className={classes.icon} />
-            <Typography className={classes.titleName}>e-Femni</Typography>
+        <div className={classes.side} onClick={()=>{
+            navigate("/")
+          }}>
+            <img className={classes.logo} src="/img/e-Femni.png" alt="logo" />
           </div>
         </Toolbar>
       </AppBar>
@@ -89,15 +111,15 @@ function Front() {
           </Typography>
           <hr width="50%" color="#FF5C8D" size="2"></hr>
           <Typography className={classes.aboutContent}>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen book. It has survived not
-            only five centuries, but also the leap into electronic typesetting,
-            remaining essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum passages,
-            and more recently with desktop publishing software like Aldus
-            PageMaker including versions of Lorem Ipsum.
+            E-Femni is a one spot destination for all the sanitary needs. In
+            today's world, less than 20% of females use sanitary products. We
+            need to raise awareness about important Women Health Topic like
+            PCOD, First Period and some irrational Myths about periods. There is
+            a Donate Facility for the needy in our society. We can reach out to
+            people and help fight the stigma around period.
+          </Typography>
+          <Typography className={classes.aboutContent}>
+            LOGIN NOW TO SHOP/HELP OUR DONATE INITIATIVE
           </Typography>
           <hr width="50%" color="#FF5C8D" size="2"></hr>
           <div className={classes.buttons}>

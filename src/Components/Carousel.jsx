@@ -28,6 +28,7 @@ const useStyles = makeStyles((theme) => ({
     width: "auto",
     height: "30rem",
   },
+
 }));
 
 function Carousel({ imgArr }) {

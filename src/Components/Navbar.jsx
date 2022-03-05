@@ -65,6 +65,10 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-around",
     alignItems: "center",
   },
+  logo: {
+    width: "120px",
+    cursor: "pointer",
+  },
   navSm: {
     display: "none",
     [theme.breakpoints.down("md")]: {
@@ -87,10 +91,10 @@ function Navbar() {
       <AppBar position="sticky">
         <Toolbar className={classes.navbar}>
           {/* Name */}
-          <div classes={classes.side}>
-            <Typography variant="h6" className={classes.name}>
-              e-Femni
-            </Typography>
+          <div className={classes.side} onClick={()=>{
+            navigate("/")
+          }}>
+            <img className={classes.logo} src="/img/e-Femni.png" alt="logo" />
           </div>
 
           {/* Search Bar */}
@@ -114,7 +118,7 @@ function Navbar() {
             <Typography
               className={classes.linkChild}
               onClick={() => {
-                navigate("/blog");
+                navigate("/blogs");
               }}
             >
               Blogs

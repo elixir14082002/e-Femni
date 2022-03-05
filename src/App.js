@@ -7,6 +7,7 @@ import Front from "./Pages/Front";
 import Home from "./Pages/Home";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NotFound from "./Components/NotFound";
+import BlogPageLayout from "./Components/BlogPageLayout";
 
 function App() {
   return (
@@ -18,7 +19,18 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/home" element={<Home />} />
           <Route path="/sell" element={<Selling />} />
-          <Route path="/blog" element={<Blogs />} />
+          <Route path="/blogs" element={<Blogs />} />
+          <Route
+            path="/blogs/:slug"
+            // element={({ match }) => (
+            //   <BlogPageLayout
+            //     blog={blogs.find(
+            //       (blog) => blog.meta.slug === match.params.slug
+            //     )}
+            //   />
+            // )}
+            element={<BlogPageLayout />}
+          />
           <Route path="/donate" element={<Donation />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
