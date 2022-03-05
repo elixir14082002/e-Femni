@@ -4,7 +4,7 @@ import Navbar from '../Components/Navbar';
 
 const useStyles = makeStyles((theme) => ({
   singleCards: {
-    width: "90%",
+    width: "50%",
     [theme.breakpoints.down("md")]: {
       width: "90%",
       margin: "0 auto",
@@ -15,7 +15,10 @@ const useStyles = makeStyles((theme) => ({
   cards: {
     display: "flex",
     flexDirection: "column",
-    textAlign: "center"
+    [theme.breakpoints.up("md")]: {
+      flexDirection: "row",
+      textAlign: "center"
+    }
   }
 }));
 
@@ -28,7 +31,7 @@ function Blogs() {
         <Card className={classes.singleCards}>
           <CardContent>
             <Typography variant="h6">
-              Blog 1
+            PCOD/PCOS
             </Typography>
             <hr></hr>
 
@@ -73,21 +76,6 @@ function Blogs() {
               <br></br>
               SLEEP CYCLE: As we all know that PCO is a hormonal issue. We should know that hormones are regulated by our body cycle. 8 hours of sleep plays an important role in the well-being of a person.
 
-            </Typography>
-
-
-          </CardContent>
-
-
-
-        </Card>
-        <Card className={classes.singleCards}>
-          <CardContent>
-            <Typography variant="h6">
-              Blog 2
-            </Typography>
-            <hr></hr>
-            <Typography variant="body2">
               PREVENTIONAL STEPS/LIFESTYLE CHANGES:
 
               <br></br>
@@ -97,6 +85,95 @@ function Blogs() {
               EXERCISE: Food and exercise go hand in hand. Being physically active is the best thing you can do for reversing PCOD.  It keeps your body strong and mind happy and resilient. Exercise can be in any form, either yoga or high intensity interval training or cardio- anything that you find sustainable in the long term.
               <br></br>
               SLEEP: We already know that 30% of PCOD patients have difficulties in sleeping. It can either be sleeping problems that cause PCOD or PCOD that causes sleeping problems.  A good night's sleep is now scientifically proven to improve endocrine function, especially PCOD. We should not compromise our sleep and work consciously towards improving the sleep quality.
+            </Typography>
+
+
+          </CardContent>
+
+
+
+        </Card>
+        <Card className={classes.singleCards}>
+          <CardContent>
+            <Typography variant="h6">
+            MYTH ABOUT PERIODS - BUSTED!
+            </Typography>
+            <hr></hr>
+            <Typography variant="body2">
+              There are some alarming Myths flowing about Periods. It's high time now! We should break the silence and bust these myths.
+              <br></br>
+
+              NUMBER #1-
+              <br></br>
+              <br></br>
+              MYTH: During periods, girls are impure. Girls during their periods should not cook or visit sacred places.
+              <br></br>
+              FACTS: Periods are just nature’s way of saying - you are growing up. There is NOTHING IMPURE  about periods.
+              <br></br>
+              NUMBER #2-
+              <br></br>
+              <br></br>
+
+              MYTH: Sanitary products should be covered in paper while purchasing and kept in private.
+              <br></br>
+              FACTS: Buying sanitary products is like buying soap or toothpaste. They are all PERSONAL HYGIENE products.
+              <br></br>
+              NUMBER #3-
+              <br></br>
+              <br></br>
+              MYTH: Girls having periods should not touch or go near plants. Plants will die if they do so.
+              <br></br>
+              FACTS: Plants do not discriminate. They thrive on good care, like all of us, irrespective of who it comes from.
+              <br></br>
+              NUMBER #4-
+              <br></br>
+              <br></br>
+              MYTH: Food like pickles, curd and tamarind (eemli) disturb the menstrual flow.
+              <br></br>
+              FACTS: The food you eat does not decide the flow of your period.
+              <br></br>
+              NUMBER #5-
+              <br></br>
+              <br></br>
+              MYTH: Girls on their period should sleep in a shed or in a different room
+              <br></br>
+              FACTS: Menstruation is not contagious and causes no harm to anyone else in the same room.
+              <br></br>
+              NUMBER #6-
+              <br></br>
+              <br></br>
+              MYTH: Any form of physical activity can disturb the flow of menstruation.
+              <br></br>
+              FACTS: Exercise and playing sports can actually help relieve pain.
+              <br></br>
+              NUMBER #7-
+              <br></br>
+              <br></br>
+              MYTH: Menstrual cycle synchronizes of females living in the same household.
+              <br></br>
+              FACTS: There is no scientific evidence of periods synchronization. Your period depends on your period cycle and not on anyone else.
+              <br></br>
+              NUMBER #8-
+              <br></br>
+              <br></br>
+              MYTH: Tampons get lost in vagina. Menstrual cups are used by virgin females for the feeling of penetration.
+              <br></br>
+              FACT: Vagina is not that big, tampons cannot be lost in there. Sanitary products like tampons, menstrual cups, pads- can be used by anyone who knows to use it. It has nothing to do with being a virgin or penetration.
+              <br></br>
+              NUMBER #9-
+              <br></br>
+              <br></br>
+              MYTH: Missing periods means good news or pregnancy.
+              <br></br>
+              FACTS: There are many reason as to missing a period during menarche, for sometime after pregnancy, during menopause or due to some hormonal isses like PCO.
+              <br></br>
+              NUMBER #10-
+              <br></br>
+              <br></br>
+              MYTH: A girl should not talk about her periods in public. If she does so she will be shamed publicly.
+              <br></br>
+              FACTS: Do you think twice before talking about hair, eyeliner, eye color, hands, legs? Talking about your periods is no different.
+              <br></br>
 
             </Typography>
 
@@ -108,7 +185,7 @@ function Blogs() {
         <Card className={classes.singleCards}>
           <CardContent>
             <Typography variant="h6">
-              Blog 3
+            FIRST PERIOD
             </Typography>
             <hr></hr>
             <Typography variant="body2">
