@@ -15,6 +15,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { products } from "../products";
 
+
 const useStyles = makeStyles((theme) => ({
   FAQtitle: {
     textAlign: "center",

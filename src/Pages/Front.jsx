@@ -88,7 +88,6 @@ function Front() {
       navigate("/home")
     } catch (err) {
       Cookies.remove("jwt-token");
-      navigate("/login");
     }
   });
   return (
