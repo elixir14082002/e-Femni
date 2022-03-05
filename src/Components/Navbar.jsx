@@ -1,13 +1,11 @@
 import {
   AppBar,
-  Avatar,
-  Badge,
   InputBase,
   makeStyles,
   Toolbar,
   Typography,
 } from "@material-ui/core";
-import { Search, Mail, Notifications, Cancel, Group } from "@material-ui/icons";
+import { Search, Cancel } from "@material-ui/icons";
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 

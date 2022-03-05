@@ -52,7 +52,9 @@ function SignIn() {
   const classes = useStyles();
 
   const loginUser = async (data) => {
-    const res = await axios.post("https://efemni.kiitians.com/api/login", data);
+    const res = await axios.post("http://localhost:3000/api/login", data,{
+      core: "no-cors",
+    });
     if (res.data.status === "error") {
       setError({
         status: true,
