@@ -8,15 +8,14 @@ import "swiper/css/navigation";
 
 const useStyles = makeStyles((theme) => ({
   main: {
-    width: "90%",
+    width: "80%",
     margin: "auto",
     height: "30rem",
-
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
     marginBottom: "3rem",
-    marginTop: "3rem",
+    marginTop: "2rem",
   },
   box: {
     width: "100%",

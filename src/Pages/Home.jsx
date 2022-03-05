@@ -35,6 +35,7 @@ const useStyles = makeStyles((theme) => ({
     flexWrap: "wrap",
     gap: "1.5rem",
     justifyContent: "center",
+    marginTop: "5rem",
   },
 }));
 
@@ -58,8 +59,11 @@ function Home() {
 
       <Carousel
         imgArr={[
-          "https://media.istockphoto.com/photos/asian-woman-use-smart-phone-for-check-in-boarding-pass-outdoors-picture-id1354179247",
-          "https://www.w3schools.com/css/img_chania.jpg",
+          "/img/1.jpeg",
+          "/img/FF1.jpeg",
+          "/img/FF2.jpeg",
+          "/img/FF3.jpeg",
+          "/img/FF4.jpeg",
         ]}
       />
 
