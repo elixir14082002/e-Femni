@@ -32,14 +32,15 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(2),
     color: "#FF5C8D",
     fontWeight: "bold",
-    fontFamily: "",
   },
   about: {
-    paddingTop: "6em",
+    paddingTop: "6rem",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     backgroundColor: "#EEEEEE",
+    height:"100vh"
+
   },
   nav: {
     height: "60px",
