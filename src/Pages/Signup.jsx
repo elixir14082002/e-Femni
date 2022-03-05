@@ -54,7 +54,7 @@ function SignUp() {
 
   const registerUser = async (data) => {
     const res = await axios.post(
-      "http://localhost:3000/api/register",
+      "https://efemni.kiitians.com/api/register",
       data
     );
 
