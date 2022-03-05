@@ -1,13 +1,6 @@
 import Carousel from "../Components/Carousel";
 import Navbar from "../Components/Navbar";
-import {
-  Typography,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
-  makeStyles,
-} from "@material-ui/core";
-import { ExpandMore } from "@material-ui/icons";
+import { makeStyles } from "@material-ui/core";
 import Product from "../Components/Product";
 import Cookies from "js-cookie";
 import jwt_decode from "jwt-decode";
