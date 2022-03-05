@@ -15,7 +15,6 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { products } from "../products";
 
-
 const useStyles = makeStyles((theme) => ({
   FAQtitle: {
     textAlign: "center",
@@ -37,6 +36,7 @@ const useStyles = makeStyles((theme) => ({
     gap: "1.5rem",
     justifyContent: "center",
     marginTop: "5rem",
+    marginBottom: "5rem",
   },
 }));
 
@@ -72,61 +72,6 @@ function Home() {
         {products.map(({ imgUrl, productName, price }) => (
           <Product imgUrl={imgUrl} productName={productName} price={price} />
         ))}
-      </div>
-
-      <Typography variant="h4" className={classes.FAQtitle}>
-        FAQs
-      </Typography>
-      <hr width="50%" color="#FF5C8D" size="2"></hr>
-      <div className={classes.faq}>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMore />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>Question 1</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMore />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>Question 1</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
-        <Accordion>
-          <AccordionSummary
-            expandIcon={<ExpandMore />}
-            aria-controls="panel1a-content"
-            id="panel1a-header"
-          >
-            <Typography>Question 1</Typography>
-          </AccordionSummary>
-          <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
-          </AccordionDetails>
-        </Accordion>
       </div>
     </div>
   );

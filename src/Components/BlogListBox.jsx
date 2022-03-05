@@ -1,9 +1,9 @@
-import Box from '@material-ui/core/Box';
+import Box from "@material-ui/core/Box";
 import Typography from "@material-ui/core/Typography";
 import { useNavigate } from "react-router-dom";
 
 const BlogListBox = ({ shortTitle, shortDescription, slug }) => {
-    const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <Box

@@ -91,9 +91,12 @@ function Navbar() {
       <AppBar position="sticky">
         <Toolbar className={classes.navbar}>
           {/* Name */}
-          <div className={classes.side} onClick={()=>{
-            navigate("/")
-          }}>
+          <div
+            className={classes.side}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             <img className={classes.logo} src="/img/e-Femni.png" alt="logo" />
           </div>
 

@@ -34,18 +34,18 @@ const useStyles = makeStyles((theme) => ({
     borderRadius: "20px",
     overflow: "hidden",
   },
-  message:{
+  message: {
     width: "80%",
     fontSize: ".7rem",
     marginTop: theme.spacing(3),
   },
-  message2:{
+  message2: {
     width: "80%",
     fontSize: ".7rem",
     marginTop: theme.spacing(2),
     display: "flex",
     justifyContent: "flex-end",
-  }
+  },
 }));
 
 function Donation() {
@@ -67,9 +67,7 @@ function Donation() {
           part by contributing and helping in this good cause. We are very
           grateful for your appreciation and support.
         </div>
-        <div className={classes.message2}>
-        -Team, e-Femni.
-         </div> 
+        <div className={classes.message2}>-Team, e-Femni.</div>
       </div>
 
       <Card className={classes.card}>

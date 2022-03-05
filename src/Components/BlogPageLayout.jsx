@@ -1,5 +1,5 @@
 import { blogs } from "../posts";
-import BlogListBox from "../Components/BlogListBox";
+import BlogListBox from "./BlogListBox";
 import { IoIosArrowBack } from "react-icons/io";
 import { useNavigate, useParams } from "react-router-dom";
 import { Box, Typography } from "@material-ui/core/";

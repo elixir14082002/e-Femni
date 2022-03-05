@@ -39,8 +39,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     alignItems: "center",
     backgroundColor: "#EEEEEE",
-    height:"100vh"
-
+    height: "100vh",
   },
   nav: {
     height: "60px",
@@ -78,7 +77,6 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Front() {
-  
   const classes = useStyles();
   const navigate = useNavigate();
 
@@ -86,7 +84,7 @@ function Front() {
     const token = Cookies.get("jwt-token");
     try {
       jwt_decode(token);
-      navigate("/home")
+      navigate("/home");
     } catch (err) {
       Cookies.remove("jwt-token");
     }
@@ -96,9 +94,12 @@ function Front() {
       {/* Navbar */}
       <AppBar position="fixed" className={classes.nav}>
         <Toolbar>
-        <div className={classes.side} onClick={()=>{
-            navigate("/")
-          }}>
+          <div
+            className={classes.side}
+            onClick={() => {
+              navigate("/");
+            }}
+          >
             <img className={classes.logo} src="/img/e-Femni.png" alt="logo" />
           </div>
         </Toolbar>
